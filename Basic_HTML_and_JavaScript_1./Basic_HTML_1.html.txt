@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic HTML and JavaScript 1</title>
+</head>
+
+<body>
+
+<h1>Basic HTML Example</h1>
+
+<p>
+<b>This text is bold.</b><br>
+<i>This text is italic.</i><br>
+<u>This text is underlined.</u>
+</p>
+
+<img src="image.jpg" alt="Example image showing something interesting">
+
+</body>
+</html>
