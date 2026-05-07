@@ -1,0 +1,290 @@
+
+/* Body */
+body {
+    margin: 0%  
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase; 
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    text-align: center; 
+    margin-top: 3%; 
+    color: #1a1a1a; 
+}
+
+/* Heading 1 element hover effect */
+h1:hover {
+    filter: grayscale(5%); 
+    transform: scale(1.1); 
+    transition: transform 1s; 
+}
+
+/* Styling for portfolio title text */
+.white-text {
+    color: #fff; 
+}
+
+/* Paragraph elements */
+p {
+font-family: "Montserrat", sans-serif;   
+text-align: justify; 
+font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+/* Paragraph element hover effect */
+p:hover {
+    transition: transform 1s;
+	transform: scale(1.01); 
+}
+
+/* Center class - this applies to all elements with the class "center" */
+.center {
+    text-align: center; 
+}
+
+/* Center class hover effect - This only affects the quote, github link, and footer */
+.center:hover {
+    transition: transform 2s; 
+    transform: scale(1.1);
+}
+
+/* Anchor elements */
+a {
+    color: #D4A373; 
+}
+
+/* Quotation elements */
+q {
+    font-style: italic; 
+}
+
+/* Image elements */
+img {
+    filter: grayscale(75%); 
+    border-radius: 8px; 
+    max-width: 100%; 
+    height: 340px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/* Image element hover effects */
+img:hover {
+	filter: grayscale(5%);  
+    transition: transform 1s; 
+	transform: scale(1.1); 
+}
+
+/* The @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/* Styling for footer element */
+footer {
+    padding: 2%; 
+    background-color: white;
+}
+
+.Navbar {
+    overflow: hidden; 
+    background-color: #D4A373; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1; 
+    -webkit-animation: moveNav 2s; 
+    animation: moveNav 2s; 
+}
+
+/* moveNav animation effect for moving the nav bar in from the left of the screen */
+@keyframes moveNav {
+    from {left: -100vw;} 
+    to {left: 0vw;} 
+}
+
+/* Navbar links */
+.Navbar a {
+    float: left; 
+    display: block; 
+    color: #FEFAE0; 
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-family: "Montserrat", sans-serif; 
+    font-size: 16px; 
+    text-align: center; 
+    position: relative; 
+    -webkit-animation: moveNavText 2.25s;
+    animation: moveNavText 2.25s; 
+}
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+    from {top: -100vw;} 
+    to {top: 0vw;} 
+}
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; 
+        font-size: 12px;
+    }
+}
+
+/* Navbar hover effects */
+.Navbar a:hover {
+    background-color: #FEFAE0; 
+    color: #CCD5AE; 
+}
+
+/* Navbar home button */
+.Navbar a.active { 
+    background-color: #CCD5AE;
+    color: #FEFAE0;
+}
+
+/* Formatting for background video */
+#Typing_Video {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    min-width: 100%;
+    min-height: 100%;
+    
+    width: auto;
+    height: auto;
+    
+    z-index: -1;
+}
+
+/* Screens that are 576px and smaller will not display the background video */
+@media screen and (max-width: 576px) {
+    #Typing_Video {
+        display: none;
+    }
+}
+
+/* Texts over the video */
+.Video_Text {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    );
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    font-size: 16px;
+}
+
+
+* { 
+    box-sizing: border-box; 
+} 
+
+.Column_1 {
+    float: left;
+    width: 50%; 
+    padding: 10px;
+    padding-top: 3%; 
+    height: 400px; 
+    background-color: #FEFAE0; 
+}
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #E9EDC9;
+}
+.Column_1 {
+    padding-bottom: 40px; 
+}
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.Row:after {
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+
+/* input[type=text] targets all text input sections of the contact form */
+input[type=text] {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; 
+    font-family: "Montserrat", sans-serif; 
+}
+
+/* Hover effects for input boxes */
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset; 
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: #CCD5AE; 
+    color: white; 
+    font-weight: bold; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    font-family: "Montserrat", sans-serif; 
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white; 
+    color: black; 
+    transform: scale(1.25); 
+    transition: transform 1.5s; 
+}
+
+/* Form element */
+form {
+    border-radius: 5px; 
+    background-color: #D4A373; 
+    padding: 10px; 
+    font-family: "Montserrat", sans-serif; 
+}
