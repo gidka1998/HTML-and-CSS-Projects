@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Martyna</title>
+        <link rel="stylesheet" type="text/css" href="portfolio.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+    
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="images/Typing.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Martyna’s Digital Space ✨</h1>
+            <strong>
+                <p class="center">
+                    <br>Code is not just instructions for machines - it is a language for turning imagination into reality.
+                        <br>Every project starts as an idea, and becomes something real through curiosity, persistence, and creativity.
+                        <br>
+                    </br>
+                    <br> Hi, I’m Martyna - a curious mind who turns ideas into code and coffee into finished projects ☕💻
+                    <br>
+                    <br> I love building websites that feel alive, experimenting with design, and learning how small lines of code can create big experiences.
+                    <br>
+                    <br> This is my little corner of the internet where creativity meets logic - thanks for stopping by and exploring with me 🚀
+        </p>
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="images/coding.jpg" alt="Coding image_1">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+            I’m Martyna - a curious and creative software developer who enjoys bringing ideas to life through code.
+            <br><br>
+
+            Outside of coding, I’m a proud parent of two and I love spending time with my family, exploring new places, and traveling whenever I get the chance.
+            <br><br>
+
+            I’m passionate about creating clean, user-friendly websites and continuously improving my skills as a developer. I’m always excited to take on new challenges and turn ideas into real, working projects.
+            <br><br>
+
+            <a href="#Contact">Contact</a> me below!
+        </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/gidka1998" target="_blank">Gidka's Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/gidka1998" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="images/coding2.jpg" alt="Coding Image_2">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <form action="" method="POST"> 
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">Gidka's portfolio 2026 <a href="https://github.com/gidka1998" target="_blank">Github</a></p>
+                <br>
+            </p>
+        </footer>
+
+        <script>
+    const navLinks = document.querySelectorAll(".Navbar a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+
+            navLinks.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        });
+    });
+</script>
+
+    </body>
+</html>
