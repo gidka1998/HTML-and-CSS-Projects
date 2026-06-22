@@ -4,129 +4,9 @@
     <title>Travel Adventures</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+   <link rel="stylesheet" href="one_page_website.css">
  <style>
-         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #0a1f44;
-            color: white;
-        }
-
-       nav {
-    background-color: #06142b;
-    padding: 20px;
-    text-align: center;
- position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-     nav a {
-    color: white;
-    margin: 0 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-        nav a:hover {
-            color: lightblue;
-        }
-
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
         
-        #home {
-    background-image: url("travel.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;         
-    text-align: center;
-}
-
-
-#home h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-#home p {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-
-#home h1, #home p {
-    background-color: rgba(0,0,0,0.5);
-    padding: 10px;
-}
-
-        #gallery {
-            background-color: #102a5c;
-        }
-
-        #video {
-            background-color: #12306b;
-        }
-
-        #contact {
-            background-color: #102a5c;
-        }
-
-       #gallery img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    margin: 10px;
-    border-radius: 10px;
-}
-.video-thumbnail p {
-    color: white;
-    margin-top: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: underline;
-}
-        
-        form {
-            background-color: #06142b;
-            padding: 20px;
-            width: 300px;
-            margin: auto;
-            border-radius: 10px;
-        }
-
-        form input, textarea {
-            width: 90%;
-            padding: 8px;
-            margin: 5px;
-        }
-
-form input[type="submit"] {
-    width: 100px;
-    padding: 8px;
-    margin-top: 10px;
-    cursor: pointer;
-border-radius: 25px;
-background-color: #FFFFFF;
-}
-
-
-        footer {
-            background-color: #06142b;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
     </style>
 </head>
 
@@ -146,20 +26,121 @@ background-color: #FFFFFF;
     <p>Discover amazing places around the world and plan your next trip!</p>
 </section>
 
-<!-- IMAGE SECTION -->
-<section id="gallery">
-    <h2>Photo Gallery</h2>
-    <img src="mountain-view.jpg" alt="Mountain view" width="300">
-    <img src="beach_sunset.avif" alt="Beach sunset" width="300">
-    <img src="city_skyline.jpg" alt="City skyline" width="300">
-</section>
+<h2 style="text-align:center" id="gallery">Gallery</h2>
+<!-- Gallery -->
+<div class="row">
+  <div class="column">
+    <img src="images/beach_sunset.avif" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/city_skyline.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/mountain-view.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/national.avif" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/train.avif" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/city.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/travel-destinations.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+
+<!-- Modal / Lightbox -->
+<div id="myModal" class="modal">
+
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+
+  <div class="modal-content">
+
+    <!-- Slides -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <img src="images/beach_sunset.avif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <img src="images/city_skyline.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <img src="images/mountain-view.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <img src="images/national.avif" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <img src="images/train.avif" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <img src="images/city.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <img src="images/travel-destinations.jpeg" style="width:100%">
+    </div>
+
+    <!-- Next/Prev -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+
+    <!-- Thumbnails -->
+<div class="column-container">
+      <div class="column">
+        <img class="demo cursor" src="images/beach_sunset.avif" onclick="currentSlide(1)" alt="Beach">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="images/city_skyline.jpg" onclick="currentSlide(2)" alt="City">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="images/mountain-view.jpg" onclick="currentSlide(3)" alt="Mountains">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="images/national.avif" onclick="currentSlide(4)" alt="Road">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/train.avif" onclick="currentSlide(5)" alt="Train">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/city.jpg" onclick="currentSlide(6)" alt="City">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/travel-destinations.jpeg" onclick="currentSlide(7)" alt="Ocean">
+      </div>
+</div>
+  </div>
+</div>
+
 
 <!-- VIDEO SECTION -->
 <section id="video">
     <h2>Travel Video</h2>
    
    <a href="https://youtu.be/afKf6WAzfCo?si=sEXTitpAsOPJnnSW" class="video-thumbnail">
-    <img src="travel_.jpg" alt="Travel video thumbnail">
+    <img src="./images/travel_.jpg" alt="Travel video thumbnail">
     <p>Watch this travel video on YouTube</p>
 </a>
 </section>
@@ -181,5 +162,6 @@ background-color: #FFFFFF;
     <p>2026 Travel Adventures | Designed by Me</p>
 </footer>
 
+<script src="./JS/one_page_website.js"></script>
 </body>
 </html>

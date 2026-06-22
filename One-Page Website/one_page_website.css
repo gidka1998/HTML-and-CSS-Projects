@@ -1,0 +1,274 @@
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0a1f44;
+            color: white;
+        }
+
+       nav {
+    background-color: #06142b;
+    padding: 20px;
+    text-align: center;
+ position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+     nav a {
+    color: white;
+    margin: 0 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+        nav a:hover {
+            color: lightblue;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        
+        #home {
+    background-image: url("./images/travel.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;         
+    text-align: center;
+}
+
+
+#home h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+#home p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+#home h1, #home p {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+        #gallery {
+            background-color: #102a5c;
+        }
+
+        #video {
+            background-color: #12306b;
+        }
+
+        #contact {
+            background-color: #102a5c;
+        }
+
+       #gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+}
+.video-thumbnail p {
+    color: white;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.video img {
+    max-width: 600px;
+  max-height: 800px;
+}
+        
+        form {
+            background-color: #06142b;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        form input, textarea {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+        }
+
+form input[type="submit"] {
+    width: 100px;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+border-radius: 25px;
+background-color: #FFFFFF;
+}
+
+
+        footer {
+            background-color: #06142b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+
+/* ===== MAIN GALLERY ===== */
+
+* {
+  box-sizing: border-box;
+}
+.row > .column {
+  padding: 0 8px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+     justify-content: center;
+    align-items: center;         
+    text-align: center;
+    padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 40%;
+}
+
+.row img {
+    height: 260px;
+}
+
+/* Hover effect */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: auto;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Modal content */
+.modal-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== SLIDES ===== */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Prev / Next */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Caption */
+.caption-container {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+/* ===== THUMBNAILS ===== */
+
+
+.column img {
+  margin-bottom: -4px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.column-container {
+    width: 700px;
+    height: 100px;
+    display: flex;
+   flex-direction: row;
+    justify-content: center;
+    align-items: center;         
+    text-align: center;
+ margin: 50px auto;
+}
+
+.column-container img {
+width: 150px;
+height: 150px;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.numbertext {
+  padding-bottom: 20px;
+}
